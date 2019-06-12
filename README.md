@@ -1,30 +1,22 @@
 # webapp
 
-> restaurant webapp for glints
+> restaurant webapp for glints. Developed using MEVN stack (MongoDB, Express.js, Vue.js, Node.js)
 
-## Build Setup
+Prerequisites to for the webapp
+Node.js/NPM installed
+MongoDB installed
 
-``` bash
-# install dependencies
-npm install
+Download the csv file containing the list of restaurant into Mongodb root directory
+Import the csv file into the database with the command "./mongoimport -d restaurant -c restaurent --type CSV --file *filename*.csv -field restaurent,hours
+Start MongoDB in port 27017 with command "./mongod"
 
-# serve with hot reload at localhost:8080
-npm run dev
+With a seperate terminal
+Run npm install to build dependencies for vue.js frontend
+run "npm run dev" to start vue.js frontend on port:8080 of localhost
 
-# build for production with minification
-npm run build
+With a seperate terminal
+cd to /server and run npm install to build dependencies for node.js backend
+run "npm start" to start node.js server on port:8081 of localhost
 
-# build for production and view the bundle analyzer report
-npm run build --report
 
-# run unit tests
-npm run unit
 
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
